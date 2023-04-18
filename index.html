@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="index.js"></script>
+</head>
+<style>
+  body {
+    color: white;
+    padding: 0 16px;
+    background-color: var(--uxp-host-background-color);
+    color: var(--uxp-host-text-color);
+    border-color: var(--uxp-host-border-color);
+    font-size: var(--uxp-host-font-size);
+  }
+
+  li:before {
+    content: '• ';
+    width: 3em;
+  }
+
+  #layers {
+    border: 1px solid #808080;
+    border-radius: 4px;
+    padding: 16px;
+  }
+</style>
+
+<body>
+  <sp-heading>Layers</sp-heading>
+
+  <sp-heading size="S">名字 （不支持多选）</sp-heading>
+  <sp-body>
+    <sp-textfield id="layerName" type="search" placeholder="层级名字">
+      <sp-label isrequired="true" slot="label">层级名字</sp-label>
+    </sp-textfield>
+    <sp-textfield id="imgName" type="search" placeholder="图片资源名字">
+      <sp-label isrequired="true" slot="label">图片资源名字</sp-label>
+    </sp-textfield>
+  </sp-body>
+
+  <sp-heading size="S">参 数 （支持多选）</sp-heading>
+  <sp-checkbox id="fullscreen" indeterminate>全屏</sp-checkbox>
+  <sp-checkbox id="slice" indeterminate>是否切九宫</sp-checkbox>
+
+  <sp-heading size="S">Rename layers</sp-heading>
+  <sp-body size="S"> Rename layers to contain their opacity. </sp-body>
+  <sp-button id="btnRename">Rename Layers</sp-button>
+
+  <sp-heading size="S">Export Report</sp-heading>
+  <sp-body size="S"> Export a report of all layers in the document. </sp-body>
+  <sp-button id="btnExport" variant="secondary">Export Report</sp-button>
+
+</body>
+
+</html>
